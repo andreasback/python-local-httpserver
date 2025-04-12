@@ -8,5 +8,7 @@ The local server can then be started using run-local-server.command which will l
 
 The whole thing can then be packed into a zip file
 
+When started either use ctrl+c to close the program or close the terminal window itself that the program is running in.
+
 # Details
 src/python-localhost-server.py contains a minimal extension of http.server.SimpleHTTPRequestHandler that returns the content of /index.html (if available) instead of returning a HTTP 404 if the requested resource doesn't exist. This is typically whats needed for a SPA frontend to work if the user tries to go to a resource that's served by a router withing the application.

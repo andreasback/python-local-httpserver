@@ -8,10 +8,9 @@ class CustomServer(SimpleHTTPRequestHandler):
 
   def do_GET(self):
     path = self.translate_path(self.path)
-    #print(f'{self.path} -> {path}')
 
     if not os.path.exists(path):
-      print('not found :)')
+      print(f'{self.path} ({path}) not found')
       index_path = self.translate_path('/index.html')
 
       if os.path.exists(index_path):
